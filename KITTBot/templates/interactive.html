@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>KITT Bot</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link href="static/bootstrap.min.css" rel="stylesheet">
+        <link href="static/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="static/magnific-popup.css">
+
+        <link href="static/aos.css" rel="stylesheet">
+
+        <link href="static/templatemo-nomad-force.css" rel="stylesheet">
+<!--
+
+TemplateMo 567 Nomad Force
+
+https://templatemo.com/tm-567-nomad-force
+
+-->
+    </head>
+    
+    <body>
+    
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <strong>KITT Bot</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#start">Start</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#features">Features</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#news">News & Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#settings">Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mb-5 pb-lg-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-3" data-aos="fade-up">Welcome to interactive KITT</h2>
+                </div>
+
+                <form method="post" class="contact-form" role="form" data-aos="fade-up">
+                    {% csrf_token %}
+                      {% if request.apikey == "" %}
+                      Please Enter chatgpt api key in <u><strong><a href="#contact">settings</a></strong></u>. Then it can start.
+                      {% else %}
+                    <button type="submit" class="btn" name="start_interface" value="start_interface">Start</button>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h5 class="text-white">
+                            <i class="bi-geo-alt-fill me-2"></i>
+                            State of Rio de Janeiro, Brazil
+                        </h5>
+
+                        <a href="mailto:info@company.com" class="custom-link mt-3 mb-5">
+                            info@company.com
+                        </a>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="copyright-text mb-0">Copyright © KITT Bot 2023 
+                        
+                        <br><br>Design: <a href="https://templatemo.com/page/1" target="_parent">TemplateMo</a></p>
+                    
+                    </div>
+
+                    <div class="col-lg-3 col-5 ms-auto">
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/jquery.sticky.js"></script>
+        <script src="static/js/aos.js"></script>
+        <script src="static/js/jquery.magnific-popup.min.js"></script>
+        <script src="static/js/magnific-popup-options.js"></script>
+        <script src="static/js/scrollspy.min.js"></script>
+        <script src="static/js/custom.js"></script>
+
+    </body>
+</html>
